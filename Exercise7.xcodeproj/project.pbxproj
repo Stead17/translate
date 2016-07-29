@@ -1,0 +1,378 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		501F462B1D46225700364CE5 /* STAVisitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 501F462A1D46225700364CE5 /* STAVisitor.m */; };
+		501F462E1D46225E00364CE5 /* STABook.m in Sources */ = {isa = PBXBuildFile; fileRef = 501F462D1D46225E00364CE5 /* STABook.m */; };
+		501F46311D46249E00364CE5 /* STABook+BookSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 501F46301D46249E00364CE5 /* STABook+BookSerialization.m */; };
+		501F46341D46254400364CE5 /* STAVisitor+VisitorSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 501F46331D46254400364CE5 /* STAVisitor+VisitorSerialization.m */; };
+		501F463A1D46631F00364CE5 /* STALibrary+LibrarySerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 501F46391D46631F00364CE5 /* STALibrary+LibrarySerialization.m */; };
+		501F463D1D46655700364CE5 /* STAModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 501F463C1D46655700364CE5 /* STAModelController.m */; };
+		502447421D47CF5B001F8551 /* STAWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 502447401D47CF5B001F8551 /* STAWindowController.m */; };
+		502447431D47CF5B001F8551 /* STAWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 502447411D47CF5B001F8551 /* STAWindowController.xib */; };
+		509498F51D42069B00A0E47D /* STAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 509498F41D42069B00A0E47D /* STAAppDelegate.m */; };
+		509498F81D42069B00A0E47D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 509498F71D42069B00A0E47D /* main.m */; };
+		509498FA1D42069B00A0E47D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 509498F91D42069B00A0E47D /* Assets.xcassets */; };
+		509498FD1D42069B00A0E47D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 509498FB1D42069B00A0E47D /* MainMenu.xib */; };
+		509499131D4361B900A0E47D /* STALibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 509499111D4361B900A0E47D /* STALibraryViewController.m */; };
+		509499141D4361B900A0E47D /* STALibraryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 509499121D4361B900A0E47D /* STALibraryViewController.xib */; };
+		50CC2DF41D48B67F00236C4F /* STACustomTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50CC2DF31D48B67F00236C4F /* STACustomTableCellView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		501F46291D46225700364CE5 /* STAVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STAVisitor.h; sourceTree = "<group>"; };
+		501F462A1D46225700364CE5 /* STAVisitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = STAVisitor.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		501F462C1D46225E00364CE5 /* STABook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = STABook.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		501F462D1D46225E00364CE5 /* STABook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = STABook.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		501F462F1D46249E00364CE5 /* STABook+BookSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "STABook+BookSerialization.h"; sourceTree = "<group>"; };
+		501F46301D46249E00364CE5 /* STABook+BookSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "STABook+BookSerialization.m"; sourceTree = "<group>"; };
+		501F46321D46254400364CE5 /* STAVisitor+VisitorSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "STAVisitor+VisitorSerialization.h"; sourceTree = "<group>"; };
+		501F46331D46254400364CE5 /* STAVisitor+VisitorSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "STAVisitor+VisitorSerialization.m"; sourceTree = "<group>"; };
+		501F46381D46631F00364CE5 /* STALibrary+LibrarySerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "STALibrary+LibrarySerialization.h"; sourceTree = "<group>"; };
+		501F46391D46631F00364CE5 /* STALibrary+LibrarySerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "STALibrary+LibrarySerialization.m"; sourceTree = "<group>"; };
+		501F463B1D46655700364CE5 /* STAModelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = STAModelController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		501F463C1D46655700364CE5 /* STAModelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = STAModelController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		5024473F1D47CF5B001F8551 /* STAWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STAWindowController.h; sourceTree = "<group>"; };
+		502447401D47CF5B001F8551 /* STAWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STAWindowController.m; sourceTree = "<group>"; };
+		502447411D47CF5B001F8551 /* STAWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STAWindowController.xib; sourceTree = "<group>"; };
+		509498F01D42069B00A0E47D /* Exercise7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exercise7.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		509498F31D42069B00A0E47D /* STAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = STAAppDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		509498F41D42069B00A0E47D /* STAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = STAAppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		509498F71D42069B00A0E47D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		509498F91D42069B00A0E47D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		509498FC1D42069B00A0E47D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		509498FE1D42069B00A0E47D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		509499101D4361B900A0E47D /* STALibraryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = STALibraryViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		509499111D4361B900A0E47D /* STALibraryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = STALibraryViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		509499121D4361B900A0E47D /* STALibraryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STALibraryViewController.xib; sourceTree = "<group>"; };
+		50CC2DF21D48B67F00236C4F /* STACustomTableCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STACustomTableCellView.h; path = ../STACustomTableCellView.h; sourceTree = "<group>"; };
+		50CC2DF31D48B67F00236C4F /* STACustomTableCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STACustomTableCellView.m; path = ../STACustomTableCellView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		509498ED1D42069B00A0E47D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5024473E1D47CF27001F8551 /* Window Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5024473F1D47CF5B001F8551 /* STAWindowController.h */,
+				502447401D47CF5B001F8551 /* STAWindowController.m */,
+				502447411D47CF5B001F8551 /* STAWindowController.xib */,
+			);
+			name = "Window Controller";
+			sourceTree = "<group>";
+		};
+		509498E71D42069B00A0E47D = {
+			isa = PBXGroup;
+			children = (
+				509498F21D42069B00A0E47D /* Exercise7 */,
+				509498F11D42069B00A0E47D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		509498F11D42069B00A0E47D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				509498F01D42069B00A0E47D /* Exercise7.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		509498F21D42069B00A0E47D /* Exercise7 */ = {
+			isa = PBXGroup;
+			children = (
+				5024473E1D47CF27001F8551 /* Window Controller */,
+				509499091D435CA600A0E47D /* Windows And Tables */,
+				5094990A1D435CD200A0E47D /* Library Classes */,
+				509498F61D42069B00A0E47D /* Supporting Files */,
+			);
+			path = Exercise7;
+			sourceTree = "<group>";
+		};
+		509498F61D42069B00A0E47D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				50CC2DF21D48B67F00236C4F /* STACustomTableCellView.h */,
+				50CC2DF31D48B67F00236C4F /* STACustomTableCellView.m */,
+				501F46381D46631F00364CE5 /* STALibrary+LibrarySerialization.h */,
+				501F46391D46631F00364CE5 /* STALibrary+LibrarySerialization.m */,
+				501F462F1D46249E00364CE5 /* STABook+BookSerialization.h */,
+				501F46301D46249E00364CE5 /* STABook+BookSerialization.m */,
+				501F46321D46254400364CE5 /* STAVisitor+VisitorSerialization.h */,
+				501F46331D46254400364CE5 /* STAVisitor+VisitorSerialization.m */,
+				509498F71D42069B00A0E47D /* main.m */,
+				509498F91D42069B00A0E47D /* Assets.xcassets */,
+				509498FE1D42069B00A0E47D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		509499091D435CA600A0E47D /* Windows And Tables */ = {
+			isa = PBXGroup;
+			children = (
+				509498F31D42069B00A0E47D /* STAAppDelegate.h */,
+				509498F41D42069B00A0E47D /* STAAppDelegate.m */,
+				509499101D4361B900A0E47D /* STALibraryViewController.h */,
+				509499111D4361B900A0E47D /* STALibraryViewController.m */,
+				501F463B1D46655700364CE5 /* STAModelController.h */,
+				501F463C1D46655700364CE5 /* STAModelController.m */,
+				509499121D4361B900A0E47D /* STALibraryViewController.xib */,
+				509498FB1D42069B00A0E47D /* MainMenu.xib */,
+			);
+			name = "Windows And Tables";
+			sourceTree = "<group>";
+		};
+		5094990A1D435CD200A0E47D /* Library Classes */ = {
+			isa = PBXGroup;
+			children = (
+				501F46291D46225700364CE5 /* STAVisitor.h */,
+				501F462A1D46225700364CE5 /* STAVisitor.m */,
+				501F462C1D46225E00364CE5 /* STABook.h */,
+				501F462D1D46225E00364CE5 /* STABook.m */,
+			);
+			name = "Library Classes";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		509498EF1D42069B00A0E47D /* Exercise7 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 509499011D42069B00A0E47D /* Build configuration list for PBXNativeTarget "Exercise7" */;
+			buildPhases = (
+				509498EC1D42069B00A0E47D /* Sources */,
+				509498ED1D42069B00A0E47D /* Frameworks */,
+				509498EE1D42069B00A0E47D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Exercise7;
+			productName = Exercise7;
+			productReference = 509498F01D42069B00A0E47D /* Exercise7.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		509498E81D42069B00A0E47D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = STA;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Иван Ткаченко";
+				TargetAttributes = {
+					509498EF1D42069B00A0E47D = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 509498EB1D42069B00A0E47D /* Build configuration list for PBXProject "Exercise7" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 509498E71D42069B00A0E47D;
+			productRefGroup = 509498F11D42069B00A0E47D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				509498EF1D42069B00A0E47D /* Exercise7 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		509498EE1D42069B00A0E47D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				502447431D47CF5B001F8551 /* STAWindowController.xib in Resources */,
+				509498FA1D42069B00A0E47D /* Assets.xcassets in Resources */,
+				509498FD1D42069B00A0E47D /* MainMenu.xib in Resources */,
+				509499141D4361B900A0E47D /* STALibraryViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		509498EC1D42069B00A0E47D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				502447421D47CF5B001F8551 /* STAWindowController.m in Sources */,
+				509498F81D42069B00A0E47D /* main.m in Sources */,
+				501F46341D46254400364CE5 /* STAVisitor+VisitorSerialization.m in Sources */,
+				501F46311D46249E00364CE5 /* STABook+BookSerialization.m in Sources */,
+				509499131D4361B900A0E47D /* STALibraryViewController.m in Sources */,
+				501F463A1D46631F00364CE5 /* STALibrary+LibrarySerialization.m in Sources */,
+				501F463D1D46655700364CE5 /* STAModelController.m in Sources */,
+				509498F51D42069B00A0E47D /* STAAppDelegate.m in Sources */,
+				501F462B1D46225700364CE5 /* STAVisitor.m in Sources */,
+				501F462E1D46225E00364CE5 /* STABook.m in Sources */,
+				50CC2DF41D48B67F00236C4F /* STACustomTableCellView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		509498FB1D42069B00A0E47D /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				509498FC1D42069B00A0E47D /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		509498FF1D42069B00A0E47D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		509499001D42069B00A0E47D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		509499021D42069B00A0E47D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Exercise7/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = stead.com.Exercise7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		509499031D42069B00A0E47D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Exercise7/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = stead.com.Exercise7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		509498EB1D42069B00A0E47D /* Build configuration list for PBXProject "Exercise7" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				509498FF1D42069B00A0E47D /* Debug */,
+				509499001D42069B00A0E47D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		509499011D42069B00A0E47D /* Build configuration list for PBXNativeTarget "Exercise7" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				509499021D42069B00A0E47D /* Debug */,
+				509499031D42069B00A0E47D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 509498E81D42069B00A0E47D /* Project object */;
+}
