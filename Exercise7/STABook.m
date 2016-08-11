@@ -97,20 +97,7 @@ NSString *const kNotificationBookOwnerDidChange = @"Book owner changed";
 {
     return _owner;
 }
-- (NSString *)text
-{
-    return _text;
-}
 
-
-- (void)setText:(NSString *)text
-{
-    if (_text != text)
-    {
-        [_text release];
-        _text = [text copy];
-    }
-}
 - (void)setBookName:(NSString *)bookName
 {
     if (_bookName != bookName)

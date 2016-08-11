@@ -16,16 +16,16 @@
 
 @property (atomic, readwrite, retain) STABook *bookToEdit;
 
-@property (atomic, readwrite, retain) NSAttributedString *textToTranslate;
-@property (atomic, readwrite, retain) NSAttributedString *textTranslated;
-
 @property (atomic, readwrite, retain) STAModelController *model;
 @property (atomic, readwrite, assign) NSMutableArray<NSMenuItem *> *arrayOfTypeCoverItems;
+
 @property (atomic, readwrite, assign) IBOutlet NSTextField *bookYearTextField;
 @property (atomic, readwrite, assign) IBOutlet NSTextView *textView;
 @property (atomic, readwrite, assign) IBOutlet NSTextView *translatedTextView;
+
 @property (atomic, readwrite, assign) IBOutlet NSPopUpButton *languagesButton;
 @property (atomic, readwrite, assign) IBOutlet NSPopUpButton *languagesToTranslate;
+
 @property (atomic, readwrite, assign) STAServerSessionManager *server;
 @property (atomic, readwrite, copy) NSDictionary *languagesDictionary;
 
@@ -35,12 +35,12 @@
 
 - (void)windowDidLoad
 {
-    NSLog(@"Feel menu");
     [super windowDidLoad];
     [self.arrayOfTypeCoverItems removeAllObjects];
     [self.arrayOfTypeCoverItems addObject:[[NSMenuItem alloc] initWithTitle:@"Undefined" action:nil keyEquivalent:@""]];
     [self.arrayOfTypeCoverItems addObject:[[NSMenuItem alloc] initWithTitle:@"Papercover" action:nil keyEquivalent:@""]];
     [self.arrayOfTypeCoverItems addObject:[[NSMenuItem alloc] initWithTitle:@"Hardcover" action:nil keyEquivalent:@""]];
+    
     [self.bookYearTextField setStringValue:[NSString stringWithFormat:@"%ld", self.bookToEdit.bookYear]];
     
     [self.server getListOfLanguages:^(NSDictionary *request)
@@ -65,7 +65,6 @@
         _server = [STAServerSessionManager new];
         _languagesDictionary = [NSDictionary new];
     }
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textDidEndEditing:) name:NSTextDidEndEditingNotification object:nil];
     return self;
 }
 
@@ -89,13 +88,9 @@
 }
 
 - (BOOL)control:(NSControl *)control textShouldEndEditing:(NSText *)fieldEditor
-{    NSLog(@"text view changed");
+{
     self.bookToEdit.bookYear = [fieldEditor.string integerValue];
     return YES;
-}
-- (IBAction)setLanguage:(NSPopUpButton *)sender
-{
-    NSLog(@"%@", sender.titleOfSelectedItem);
 }
 
 - (IBAction)detectLanguage:(NSButton *)button
@@ -118,40 +113,30 @@
 - (IBAction)tramslateLanguage:(NSButton *)sender
 {
     __block NSString *translateDirection;
-    [self.languagesDictionary enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, NSString *obj, BOOL * _Nonnull stop)
+    [self.languagesDictionary enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSString *obj, BOOL * _Nonnull stop)
     {
         if ([self.languagesToTranslate.titleOfSelectedItem isEqualToString:obj])
         {
             translateDirection = [key copy];
         }
     }];
-    NSLog(@"%@", [self.textView string]);
     [self.server translateText:^(NSDictionary *dictionary)
     {
-        NSString *string = [NSString stringWithFormat:@"%@", [dictionary objectForKey:@"text"]];
-        NSLog(@"%@", [[dictionary objectForKey:@"text"] class]);
-        NSError *error = nil;
+        NSString *resultText = [NSArray arrayWithArray:[dictionary objectForKey:@"text"]][0];
         
-        NSData *data = [NSJSONSerialization dataWithJSONObject:[dictionary objectForKey:@"text"] options:NSJSONWritingPrettyPrinted error:nil];
-        NSLog(@"%@", data);
+        [self.translatedTextView setString:@""];
         
-        id object = [NSJSONSerialization JSONObjectWithData:data options:0
-                                                   error:&error];
-        if (!error)
+        __block NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:resultText];
+        [self.textView.attributedString enumerateAttributesInRange:NSMakeRange(0, self.textView.attributedString.length) options:NSAttributedStringEnumerationLongestEffectiveRangeNotRequired usingBlock:^(NSDictionary<NSString *,id> * _Nonnull attrs, NSRange range, BOOL * _Nonnull stop)
         {
-            NSLog(@"object %@", [object class]);
-        }
+            [attributedString addAttributes:attrs range:range];
+        }];
         
-        NSAttributedString *attrstring = [[NSAttributedString alloc] initWithString:string];
-        NSLog(@"Translated %@", string);
-        [self.translatedTextView setString:@"Hello"];
-        [self.translatedTextView.textStorage setAttributedString:attrstring];
-    } textToTranslate:[self.textView string] translationDirection:@"ru"];
+        [self.translatedTextView.textStorage setAttributedString:attributedString];
+        
+    } textToTranslate:self.textView.string translationDirection:translateDirection];
 }
 
-- (void)textDidEndEditing:(NSNotification *)notification
-{
-}
 
 - (NSUInteger)hash
 {

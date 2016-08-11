@@ -96,7 +96,6 @@ NSString * const kSTATextArguementToRequest = @"text=";
     NSString *textToTranslate = [NSString stringWithFormat:@"%@%@", kSTATextArguementToRequest, text];
     
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@%@%@", kSTAMainURL, kSTAPOSTRequestTranslateText, direction, kSTAKeyArguement, kSTAAPIKey]];
-    NSLog(@"%@", url);
     NSData *data = [textToTranslate dataUsingEncoding:NSUTF8StringEncoding];
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
