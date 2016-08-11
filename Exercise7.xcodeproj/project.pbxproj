@@ -15,13 +15,17 @@
 		501F463D1D46655700364CE5 /* STAModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 501F463C1D46655700364CE5 /* STAModelController.m */; };
 		502447421D47CF5B001F8551 /* STAWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 502447401D47CF5B001F8551 /* STAWindowController.m */; };
 		502447431D47CF5B001F8551 /* STAWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 502447411D47CF5B001F8551 /* STAWindowController.xib */; };
+		506989A01D5B13DE005C1214 /* STACustomTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5069899F1D5B13DE005C1214 /* STACustomTableCellView.m */; };
+		506989A41D5B1408005C1214 /* STABookEditWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 506989A21D5B1408005C1214 /* STABookEditWindow.m */; };
+		506989A51D5B1408005C1214 /* STABookEditWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 506989A31D5B1408005C1214 /* STABookEditWindow.xib */; };
+		506989A91D5B7257005C1214 /* STAServerSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 506989A81D5B7257005C1214 /* STAServerSessionManager.m */; };
+		506989AC1D5CA9E8005C1214 /* STAIntegerToString.m in Sources */ = {isa = PBXBuildFile; fileRef = 506989AB1D5CA9E8005C1214 /* STAIntegerToString.m */; };
 		509498F51D42069B00A0E47D /* STAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 509498F41D42069B00A0E47D /* STAAppDelegate.m */; };
 		509498F81D42069B00A0E47D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 509498F71D42069B00A0E47D /* main.m */; };
 		509498FA1D42069B00A0E47D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 509498F91D42069B00A0E47D /* Assets.xcassets */; };
 		509498FD1D42069B00A0E47D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 509498FB1D42069B00A0E47D /* MainMenu.xib */; };
 		509499131D4361B900A0E47D /* STALibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 509499111D4361B900A0E47D /* STALibraryViewController.m */; };
 		509499141D4361B900A0E47D /* STALibraryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 509499121D4361B900A0E47D /* STALibraryViewController.xib */; };
-		50CC2DF41D48B67F00236C4F /* STACustomTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50CC2DF31D48B67F00236C4F /* STACustomTableCellView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +44,15 @@
 		5024473F1D47CF5B001F8551 /* STAWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STAWindowController.h; sourceTree = "<group>"; };
 		502447401D47CF5B001F8551 /* STAWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STAWindowController.m; sourceTree = "<group>"; };
 		502447411D47CF5B001F8551 /* STAWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STAWindowController.xib; sourceTree = "<group>"; };
+		5069899E1D5B13DE005C1214 /* STACustomTableCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STACustomTableCellView.h; sourceTree = "<group>"; };
+		5069899F1D5B13DE005C1214 /* STACustomTableCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STACustomTableCellView.m; sourceTree = "<group>"; };
+		506989A11D5B1408005C1214 /* STABookEditWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STABookEditWindow.h; sourceTree = "<group>"; };
+		506989A21D5B1408005C1214 /* STABookEditWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STABookEditWindow.m; sourceTree = "<group>"; };
+		506989A31D5B1408005C1214 /* STABookEditWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STABookEditWindow.xib; sourceTree = "<group>"; };
+		506989A71D5B7257005C1214 /* STAServerSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STAServerSessionManager.h; sourceTree = "<group>"; };
+		506989A81D5B7257005C1214 /* STAServerSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STAServerSessionManager.m; sourceTree = "<group>"; };
+		506989AA1D5CA9E8005C1214 /* STAIntegerToString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STAIntegerToString.h; sourceTree = "<group>"; };
+		506989AB1D5CA9E8005C1214 /* STAIntegerToString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STAIntegerToString.m; sourceTree = "<group>"; };
 		509498F01D42069B00A0E47D /* Exercise7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exercise7.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		509498F31D42069B00A0E47D /* STAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = STAAppDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		509498F41D42069B00A0E47D /* STAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = STAAppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
@@ -50,8 +63,6 @@
 		509499101D4361B900A0E47D /* STALibraryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = STALibraryViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		509499111D4361B900A0E47D /* STALibraryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = STALibraryViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		509499121D4361B900A0E47D /* STALibraryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STALibraryViewController.xib; sourceTree = "<group>"; };
-		50CC2DF21D48B67F00236C4F /* STACustomTableCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STACustomTableCellView.h; path = ../STACustomTableCellView.h; sourceTree = "<group>"; };
-		50CC2DF31D48B67F00236C4F /* STACustomTableCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STACustomTableCellView.m; path = ../STACustomTableCellView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,9 +81,19 @@
 			children = (
 				5024473F1D47CF5B001F8551 /* STAWindowController.h */,
 				502447401D47CF5B001F8551 /* STAWindowController.m */,
-				502447411D47CF5B001F8551 /* STAWindowController.xib */,
+				506989A11D5B1408005C1214 /* STABookEditWindow.h */,
+				506989A21D5B1408005C1214 /* STABookEditWindow.m */,
 			);
 			name = "Window Controller";
+			sourceTree = "<group>";
+		};
+		506989A61D5B722A005C1214 /* Server Connection */ = {
+			isa = PBXGroup;
+			children = (
+				506989A71D5B7257005C1214 /* STAServerSessionManager.h */,
+				506989A81D5B7257005C1214 /* STAServerSessionManager.m */,
+			);
+			name = "Server Connection";
 			sourceTree = "<group>";
 		};
 		509498E71D42069B00A0E47D = {
@@ -94,6 +115,7 @@
 		509498F21D42069B00A0E47D /* Exercise7 */ = {
 			isa = PBXGroup;
 			children = (
+				506989A61D5B722A005C1214 /* Server Connection */,
 				5024473E1D47CF27001F8551 /* Window Controller */,
 				509499091D435CA600A0E47D /* Windows And Tables */,
 				5094990A1D435CD200A0E47D /* Library Classes */,
@@ -105,14 +127,12 @@
 		509498F61D42069B00A0E47D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				50CC2DF21D48B67F00236C4F /* STACustomTableCellView.h */,
-				50CC2DF31D48B67F00236C4F /* STACustomTableCellView.m */,
-				501F46381D46631F00364CE5 /* STALibrary+LibrarySerialization.h */,
-				501F46391D46631F00364CE5 /* STALibrary+LibrarySerialization.m */,
-				501F462F1D46249E00364CE5 /* STABook+BookSerialization.h */,
-				501F46301D46249E00364CE5 /* STABook+BookSerialization.m */,
-				501F46321D46254400364CE5 /* STAVisitor+VisitorSerialization.h */,
-				501F46331D46254400364CE5 /* STAVisitor+VisitorSerialization.m */,
+				509499121D4361B900A0E47D /* STALibraryViewController.xib */,
+				502447411D47CF5B001F8551 /* STAWindowController.xib */,
+				506989A31D5B1408005C1214 /* STABookEditWindow.xib */,
+				509498FB1D42069B00A0E47D /* MainMenu.xib */,
+				506989AA1D5CA9E8005C1214 /* STAIntegerToString.h */,
+				506989AB1D5CA9E8005C1214 /* STAIntegerToString.m */,
 				509498F71D42069B00A0E47D /* main.m */,
 				509498F91D42069B00A0E47D /* Assets.xcassets */,
 				509498FE1D42069B00A0E47D /* Info.plist */,
@@ -129,8 +149,6 @@
 				509499111D4361B900A0E47D /* STALibraryViewController.m */,
 				501F463B1D46655700364CE5 /* STAModelController.h */,
 				501F463C1D46655700364CE5 /* STAModelController.m */,
-				509499121D4361B900A0E47D /* STALibraryViewController.xib */,
-				509498FB1D42069B00A0E47D /* MainMenu.xib */,
 			);
 			name = "Windows And Tables";
 			sourceTree = "<group>";
@@ -142,6 +160,14 @@
 				501F462A1D46225700364CE5 /* STAVisitor.m */,
 				501F462C1D46225E00364CE5 /* STABook.h */,
 				501F462D1D46225E00364CE5 /* STABook.m */,
+				501F46381D46631F00364CE5 /* STALibrary+LibrarySerialization.h */,
+				501F46391D46631F00364CE5 /* STALibrary+LibrarySerialization.m */,
+				501F462F1D46249E00364CE5 /* STABook+BookSerialization.h */,
+				501F46301D46249E00364CE5 /* STABook+BookSerialization.m */,
+				501F46321D46254400364CE5 /* STAVisitor+VisitorSerialization.h */,
+				501F46331D46254400364CE5 /* STAVisitor+VisitorSerialization.m */,
+				5069899E1D5B13DE005C1214 /* STACustomTableCellView.h */,
+				5069899F1D5B13DE005C1214 /* STACustomTableCellView.m */,
 			);
 			name = "Library Classes";
 			sourceTree = "<group>";
@@ -208,6 +234,7 @@
 				509498FA1D42069B00A0E47D /* Assets.xcassets in Resources */,
 				509498FD1D42069B00A0E47D /* MainMenu.xib in Resources */,
 				509499141D4361B900A0E47D /* STALibraryViewController.xib in Resources */,
+				506989A51D5B1408005C1214 /* STABookEditWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				502447421D47CF5B001F8551 /* STAWindowController.m in Sources */,
+				506989A91D5B7257005C1214 /* STAServerSessionManager.m in Sources */,
 				509498F81D42069B00A0E47D /* main.m in Sources */,
 				501F46341D46254400364CE5 /* STAVisitor+VisitorSerialization.m in Sources */,
 				501F46311D46249E00364CE5 /* STABook+BookSerialization.m in Sources */,
@@ -226,9 +254,11 @@
 				501F463A1D46631F00364CE5 /* STALibrary+LibrarySerialization.m in Sources */,
 				501F463D1D46655700364CE5 /* STAModelController.m in Sources */,
 				509498F51D42069B00A0E47D /* STAAppDelegate.m in Sources */,
+				506989AC1D5CA9E8005C1214 /* STAIntegerToString.m in Sources */,
 				501F462B1D46225700364CE5 /* STAVisitor.m in Sources */,
 				501F462E1D46225E00364CE5 /* STABook.m in Sources */,
-				50CC2DF41D48B67F00236C4F /* STACustomTableCellView.m in Sources */,
+				506989A01D5B13DE005C1214 /* STACustomTableCellView.m in Sources */,
+				506989A41D5B1408005C1214 /* STABookEditWindow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

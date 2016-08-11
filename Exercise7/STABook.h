@@ -30,6 +30,7 @@ extern NSString *const kNotificationBookOwnerDidChange;
 @property (readwrite) STABookType coverType;
 @property (assign, readwrite) STAVisitor *owner;
 @property (retain, readonly) NSString *ID;
+@property (copy, readwrite) NSAttributedString *text;
 
 - (instancetype)initWithBookName:(NSString *)bookName bookYear:(NSUInteger)year bookType:(STABookType)coverType;
 + (instancetype)bookWithName:(NSString *)name bookYear:(NSUInteger)year bookType:(STABookType)coverType;

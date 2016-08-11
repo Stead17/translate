@@ -11,6 +11,7 @@
 #import "STAModelController.h"
 #import "STABook.h"
 #import "STAVisitor.h"
+#import "STAServerSessionManager.h"
 
 @interface STAAppDelegate ()
 {
@@ -56,6 +57,22 @@
     [libr release];
     
     [self.window setContentView:self.library.view];
+    
+//    STAServerSessionManager *server = [[STAServerSessionManager alloc] init];
+//    [server getListOfLanguages:^(NSDictionary *receiveData)
+//    {
+//        NSLog(@"Yeeppp %@", receiveData);
+//    }];
+//    
+//    [server languageDetect:^(NSDictionary *receiveData)
+//    {
+//        NSLog(@"%@", receiveData);
+//    } textToDetect:@"тато"];
+//    
+//    [server translateText:^(NSDictionary *receiceData)
+//     {
+//        NSLog(@"%@", receiceData);
+//     } textToTranslate:@"Привет" translationDirection:@"en"];
     
 }
 

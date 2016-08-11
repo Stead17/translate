@@ -18,25 +18,17 @@
             <rect key="frame" x="0.0" y="0.0" width="914" height="654"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aFT-WG-68p">
-                    <rect key="frame" x="44" y="613" width="130" height="27"/>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aFT-WG-68p">
+                    <rect key="frame" x="44" y="613" width="83" height="27"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Visitors:" id="cY4-ri-wvF">
                         <font key="font" metaFont="system" size="22"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u2I-Wg-bEg">
-                    <rect key="frame" x="44" y="299" width="130" height="27"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Books:" id="StG-4H-I9k">
-                        <font key="font" metaFont="system" size="22"/>
-                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
-                <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="32" horizontalPageScroll="10" verticalLineScroll="32" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nk8-BV-umW">
+                <scrollView autohidesScrollers="YES" horizontalLineScroll="32" horizontalPageScroll="10" verticalLineScroll="32" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nk8-BV-umW">
                     <rect key="frame" x="46" y="334" width="823" height="271"/>
-                    <clipView key="contentView" ambiguous="YES" drawsBackground="NO" id="cYI-Lq-l4S">
+                    <clipView key="contentView" drawsBackground="NO" id="cYI-Lq-l4S">
                         <rect key="frame" x="1" y="0.0" width="821" height="270"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -163,6 +155,9 @@
                         </subviews>
                         <nil key="backgroundColor"/>
                     </clipView>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="271" id="oWa-ey-8QV"/>
+                    </constraints>
                     <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="KPb-br-oBe">
                         <rect key="frame" x="1" y="7" width="0.0" height="16"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -176,8 +171,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </tableHeaderView>
                 </scrollView>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cXb-LN-ENI">
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cXb-LN-ENI">
                     <rect key="frame" x="573" y="605" width="107" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="5j8-nI-LzC"/>
+                        <constraint firstAttribute="width" constant="95" id="whd-qf-Qji"/>
+                    </constraints>
                     <buttonCell key="cell" type="push" title="Add Visitor" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Sye-66-ku5">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
@@ -186,8 +185,12 @@
                         <action selector="addVisitor:" target="-2" id="qKV-NX-Jqw"/>
                     </connections>
                 </button>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ocO-SP-Ida">
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ocO-SP-Ida">
                     <rect key="frame" x="715" y="605" width="122" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="FVU-PS-APW"/>
+                        <constraint firstAttribute="width" constant="110" id="iFQ-Ju-oZQ"/>
+                    </constraints>
                     <buttonCell key="cell" type="push" title="Delete Visitor" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dpb-Pa-7KF">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
@@ -196,8 +199,12 @@
                         <action selector="deleteVisitor:" target="-2" id="OaB-uL-NVy"/>
                     </connections>
                 </button>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pas-oS-8dX">
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Pas-oS-8dX">
                     <rect key="frame" x="577" y="295" width="103" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="91" id="5FU-eC-dK3"/>
+                        <constraint firstAttribute="height" constant="21" id="Wj2-gB-axG"/>
+                    </constraints>
                     <buttonCell key="cell" type="push" title="Add Book" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Owh-Zh-Yod">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
@@ -206,8 +213,12 @@
                         <action selector="addBook:" target="-2" id="gaX-JV-jfE"/>
                     </connections>
                 </button>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gYv-gv-W06">
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gYv-gv-W06">
                     <rect key="frame" x="715" y="295" width="122" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="110" id="DMF-We-XIk"/>
+                        <constraint firstAttribute="height" constant="21" id="GFE-na-ZtA"/>
+                    </constraints>
                     <buttonCell key="cell" type="push" title="Delete Book" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="OU6-5B-xDY">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
@@ -216,9 +227,9 @@
                         <action selector="deleteBook:" target="-2" id="UP4-dI-uzf"/>
                     </connections>
                 </button>
-                <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="32" horizontalPageScroll="10" verticalLineScroll="32" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hRH-Dt-33m">
+                <scrollView autohidesScrollers="YES" horizontalLineScroll="32" horizontalPageScroll="10" verticalLineScroll="32" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hRH-Dt-33m">
                     <rect key="frame" x="46" y="20" width="823" height="271"/>
-                    <clipView key="contentView" ambiguous="YES" drawsBackground="NO" id="CIE-qO-Fwq">
+                    <clipView key="contentView" drawsBackground="NO" id="CIE-qO-Fwq">
                         <rect key="frame" x="1" y="0.0" width="821" height="270"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -247,8 +258,12 @@
                                                 <rect key="frame" x="1" y="1" width="203" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <textField identifier="bookTitleTableColumn" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fR0-rC-PS5">
+                                                    <textField identifier="bookTitleTableColumn" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fR0-rC-PS5">
                                                         <rect key="frame" x="1" y="10" width="110" height="22"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="106" id="9AG-nw-xVa"/>
+                                                            <constraint firstAttribute="height" constant="22" id="M8q-EG-qHR"/>
+                                                        </constraints>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" placeholderString="Add book title" id="Agn-Rl-tML">
                                                             <font key="font" metaFont="system" size="15"/>
                                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -259,6 +274,11 @@
                                                         </connections>
                                                     </textField>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="fR0-rC-PS5" secondAttribute="trailing" constant="94" id="92M-73-NsO"/>
+                                                    <constraint firstItem="fR0-rC-PS5" firstAttribute="top" secondItem="Y5x-DR-KCe" secondAttribute="top" constant="-2" id="NvF-dE-O4J"/>
+                                                    <constraint firstAttribute="bottom" secondItem="fR0-rC-PS5" secondAttribute="bottom" constant="10" id="qEf-dy-ME0"/>
+                                                </constraints>
                                                 <connections>
                                                     <outlet property="textField" destination="fR0-rC-PS5" id="MTr-Cy-P1H"/>
                                                 </connections>
@@ -321,7 +341,7 @@
                                                         <rect key="frame" x="32" y="3" width="140" height="26"/>
                                                         <popUpButtonCell key="cell" type="push" title="Undefined" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" selectedItem="S0q-Xg-I0Y" id="J14-pT-TSh">
                                                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="system"/>
+                                                            <font key="font" metaFont="menu"/>
                                                             <menu key="menu" id="Hrz-t4-jP2">
                                                                 <items>
                                                                     <menuItem title="Undefined" state="on" id="S0q-Xg-I0Y"/>
@@ -354,12 +374,12 @@
                                         </textFieldCell>
                                         <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                         <prototypeCellViews>
-                                            <tableCellView id="KfJ-l5-XdN">
+                                            <tableCellView misplaced="YES" id="KfJ-l5-XdN">
                                                 <rect key="frame" x="619" y="1" width="203" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <textField identifier="bookOwnerTableColumn" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FWw-7o-990">
-                                                        <rect key="frame" x="1" y="10" width="110" height="22"/>
+                                                    <textField identifier="bookOwnerTableColumn" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FWw-7o-990">
+                                                        <rect key="frame" x="1" y="10" width="141" height="22"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" state="on" placeholderString="Choose owner" id="5Ow-SL-fJH">
                                                             <font key="font" metaFont="system" size="15"/>
                                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -370,6 +390,12 @@
                                                         </connections>
                                                     </textField>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="FWw-7o-990" secondAttribute="trailing" constant="63" id="3tZ-4c-gsV"/>
+                                                    <constraint firstAttribute="bottom" secondItem="FWw-7o-990" secondAttribute="bottom" constant="10" id="8dv-JB-dlz"/>
+                                                    <constraint firstItem="FWw-7o-990" firstAttribute="top" secondItem="KfJ-l5-XdN" secondAttribute="top" constant="-2" id="Ber-IM-JlF"/>
+                                                    <constraint firstItem="FWw-7o-990" firstAttribute="leading" secondItem="KfJ-l5-XdN" secondAttribute="leading" constant="3" id="NDM-2j-zGC"/>
+                                                </constraints>
                                                 <connections>
                                                     <outlet property="textField" destination="FWw-7o-990" id="fgi-xP-Ekh"/>
                                                 </connections>
@@ -378,6 +404,7 @@
                                     </tableColumn>
                                 </tableColumns>
                                 <connections>
+                                    <action trigger="doubleAction" selector="reactionOnDoubleClick:" target="-2" id="IR2-sj-nqh"/>
                                     <outlet property="dataSource" destination="-2" id="Hlw-0b-NrT"/>
                                     <outlet property="delegate" destination="-2" id="aj4-N0-vsf"/>
                                 </connections>
@@ -398,7 +425,44 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </tableHeaderView>
                 </scrollView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="u2I-Wg-bEg">
+                    <rect key="frame" x="44" y="299" width="130" height="27"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="126" id="Z0Z-H9-onr"/>
+                        <constraint firstAttribute="height" constant="27" id="aBl-yM-Zl1"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Books:" id="StG-4H-I9k">
+                        <font key="font" metaFont="system" size="22"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
             </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="gYv-gv-W06" secondAttribute="trailing" constant="83" id="0Fh-2x-8vC"/>
+                <constraint firstItem="gYv-gv-W06" firstAttribute="leading" secondItem="Pas-oS-8dX" secondAttribute="trailing" constant="47" id="7nI-1L-inv"/>
+                <constraint firstItem="u2I-Wg-bEg" firstAttribute="leading" secondItem="yC2-Y4-p7K" secondAttribute="leading" constant="46" id="94i-Fb-ysM"/>
+                <constraint firstItem="u2I-Wg-bEg" firstAttribute="top" secondItem="Nk8-BV-umW" secondAttribute="bottom" constant="8" id="AbB-2B-jq2"/>
+                <constraint firstItem="hRH-Dt-33m" firstAttribute="height" secondItem="Nk8-BV-umW" secondAttribute="height" id="BZc-dq-OUv"/>
+                <constraint firstItem="Nk8-BV-umW" firstAttribute="top" secondItem="ocO-SP-Ida" secondAttribute="bottom" constant="7" id="Bvl-x3-rV4"/>
+                <constraint firstItem="ocO-SP-Ida" firstAttribute="top" secondItem="yC2-Y4-p7K" secondAttribute="top" constant="21" id="I0X-VT-fkz"/>
+                <constraint firstAttribute="bottom" secondItem="hRH-Dt-33m" secondAttribute="bottom" priority="200" constant="20" id="Iwy-Li-8BN"/>
+                <constraint firstItem="cXb-LN-ENI" firstAttribute="top" secondItem="yC2-Y4-p7K" secondAttribute="top" constant="21" id="KjH-Tu-AuP"/>
+                <constraint firstItem="ocO-SP-Ida" firstAttribute="leading" secondItem="cXb-LN-ENI" secondAttribute="trailing" constant="47" id="MYD-of-4Ba"/>
+                <constraint firstAttribute="trailing" secondItem="Nk8-BV-umW" secondAttribute="trailing" constant="45" id="O4R-Mj-Tuu"/>
+                <constraint firstItem="hRH-Dt-33m" firstAttribute="leading" secondItem="yC2-Y4-p7K" secondAttribute="leading" constant="46" id="Pqc-MD-b3t"/>
+                <constraint firstItem="Nk8-BV-umW" firstAttribute="top" secondItem="aFT-WG-68p" secondAttribute="bottom" constant="8" id="Wjr-6H-fcO"/>
+                <constraint firstAttribute="trailing" secondItem="hRH-Dt-33m" secondAttribute="trailing" constant="45" id="axR-P7-TcG"/>
+                <constraint firstItem="aFT-WG-68p" firstAttribute="leading" secondItem="yC2-Y4-p7K" secondAttribute="leading" constant="46" id="bHk-iC-pfb"/>
+                <constraint firstItem="aFT-WG-68p" firstAttribute="top" secondItem="yC2-Y4-p7K" secondAttribute="top" constant="14" id="dPO-De-fKR"/>
+                <constraint firstItem="Pas-oS-8dX" firstAttribute="top" secondItem="Nk8-BV-umW" secondAttribute="bottom" constant="11" id="e53-fK-d11"/>
+                <constraint firstItem="hRH-Dt-33m" firstAttribute="top" secondItem="u2I-Wg-bEg" secondAttribute="bottom" constant="8" id="mOZ-Ga-fSP"/>
+                <constraint firstItem="hRH-Dt-33m" firstAttribute="top" secondItem="Pas-oS-8dX" secondAttribute="bottom" constant="11" id="nM1-RO-Arb"/>
+                <constraint firstItem="hRH-Dt-33m" firstAttribute="top" secondItem="gYv-gv-W06" secondAttribute="bottom" constant="11" id="qIK-fj-eN9"/>
+                <constraint firstAttribute="trailing" secondItem="ocO-SP-Ida" secondAttribute="trailing" constant="83" id="qMD-6k-96V"/>
+                <constraint firstItem="gYv-gv-W06" firstAttribute="top" secondItem="Nk8-BV-umW" secondAttribute="bottom" constant="11" id="sse-vI-NBo"/>
+                <constraint firstItem="Nk8-BV-umW" firstAttribute="leading" secondItem="yC2-Y4-p7K" secondAttribute="leading" constant="46" id="y4R-Kb-hSi"/>
+            </constraints>
             <point key="canvasLocation" x="464" y="981"/>
         </view>
     </objects>

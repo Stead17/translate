@@ -23,7 +23,9 @@ NSString *const kNotificationBookOwnerDidChange = @"Book owner changed";
     STABookType _coverType;
     STAVisitor *_owner;
     NSString *_ID;
+    NSAttributedString *_text;
 }
+
 @end
 
 @implementation STABook
@@ -95,7 +97,20 @@ NSString *const kNotificationBookOwnerDidChange = @"Book owner changed";
 {
     return _owner;
 }
+- (NSString *)text
+{
+    return _text;
+}
 
+
+- (void)setText:(NSString *)text
+{
+    if (_text != text)
+    {
+        [_text release];
+        _text = [text copy];
+    }
+}
 - (void)setBookName:(NSString *)bookName
 {
     if (_bookName != bookName)
@@ -134,11 +149,13 @@ NSString *const kNotificationBookOwnerDidChange = @"Book owner changed";
         }
     }
     return result;
+//    && [self.text isEqualToString:temporaryBook.text]
 }
 
 - (NSUInteger)hash
 {
-    return self.bookName.hash ^ self.bookYear ^ self.coverType ^ self.owner.hash ^ self.ID.hash;
+    return self.bookName.hash ^ self.bookYear ^ self.coverType ^ self.owner.hash ^ self.ID.hash ;
+//    ^ self.text.hash
 }
 
 - (NSString *)description

@@ -18,7 +18,8 @@ NSString *const kNotificationModelVisitorDidRemoved = @"Visitor from from librar
 NSString *const kNotificationModelBookDidAdded = @"Book added to library";
 NSString *const kNotificationModelBookDidRemoved = @"Book removed from library";
 
-@interface STAModelController() {
+@interface STAModelController()
+{
 @private
     NSMutableArray<STABook *> *_listOfBooks;
     NSMutableArray<STAVisitor *> *_listOfVisitors;
@@ -95,7 +96,7 @@ NSString *const kNotificationModelBookDidRemoved = @"Book removed from library";
 {
     BOOL result= NO;
     if (aVisitor && ![self.listOfVisitors containsObject:aVisitor])
-    {
+    {   
         [self.mListOfVisitors addObject:aVisitor];
         for (STABook *book in aVisitor.visitorBooks)
         {

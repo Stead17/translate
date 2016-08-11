@@ -256,6 +256,26 @@ NSString *const kOwnedButtonState = @"Owned by";
     }
 }
 
+- (BOOL)isEqual:(id)other
+{
+    BOOL result = NO;
+    if ([other isKindOfClass:[self class]])
+    {
+        STAWindowController *windowController = (STAWindowController *)other;
+        if ([windowController.visitor isEqual:self.visitor])
+        {
+            result = YES;
+        }
+    }
+    return result;
+}
+
+- (NSUInteger)hash
+{
+    return self.visitor.hash;
+}
+
+
 - (STAModelController *)modelController
 {
     return _modelController;

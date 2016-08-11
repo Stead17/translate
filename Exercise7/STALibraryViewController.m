@@ -7,8 +7,11 @@
 //
 
 #import "STALibraryViewController.h"
+
 #import "STAModelController.h"
 #import "STAWindowController.h"
+#import "STABookEditWindow.h"
+
 #import "STAVisitor.h"
 #import "STABook.h"
 #import "STAVisitor+VisitorSerialization.h"
@@ -200,7 +203,7 @@ NSString *const kOwnerTableColumnIdentifier = @"bookOwnerTableColumn";
             nameCell = [tableView makeViewWithIdentifier:kOwnerTableColumnIdentifier owner:self];
             if (!book.owner)
             {
-                ((NSTableCellView *)nameCell).textField.stringValue = [NSString stringWithFormat:@"No info"];
+                ((NSTableCellView *)nameCell).textField.stringValue = [NSString stringWithFormat:@"No owner"];
             }
             else
             {
@@ -213,7 +216,6 @@ NSString *const kOwnerTableColumnIdentifier = @"bookOwnerTableColumn";
     return nameCell;
 }
 
-// MARK: Check for control typecasting
 - (BOOL)control:(NSControl *)control textShouldEndEditing:(NSText *)fieldEditor
 {
     NSInteger row = [self.visitorsTableView rowForView:control.superview];
@@ -306,19 +308,6 @@ NSString *const kOwnerTableColumnIdentifier = @"bookOwnerTableColumn";
     }
 }
 
-
-- (IBAction)reactionOnDoubleClick:(id)sender
-{
-    if ([sender isKindOfClass:[NSTableView class]])
-    {
-        NSTableView *table = (NSTableView *)sender;
-        if (table.clickedRow != -1 && table.clickedColumn != -1)
-        {
-            [self newWindowController:self.modelController.listOfVisitors[table.clickedRow]];
-        }
-    }
-    
-}
 - (IBAction)changeCoverType:(NSPopUpButton *)sender
 {
     NSInteger row = [self.booksTableView rowForView:sender.superview];
@@ -360,25 +349,85 @@ NSString *const kOwnerTableColumnIdentifier = @"bookOwnerTableColumn";
     }
 }
 
-- (void)newWindowController:(STAVisitor *)visitor
+
+/***********************************************
+    Methods that controll window open and close
+***********************************************/
+- (IBAction)reactionOnDoubleClick:(id)sender
 {
-    STAWindowController *windowController = [[STAWindowController alloc] initWithWindowNibName:@"STAWindowController" visitorForTable:visitor modelToChange:self.modelController];
-    if (self.windowControllersArray == nil)
+    if ([sender isKindOfClass:[NSTableView class]])
     {
-        self.windowControllersArray = [[NSMutableArray alloc] init];
-        
+        NSTableView *table = (NSTableView *)sender;
+        if ([table.identifier isEqualToString:kVisitorsTableViewIdentifier])
+        {
+            if (table.clickedRow != -1 && table.clickedColumn != -1)
+            {
+                [self newWindowController:self.modelController.listOfVisitors[table.clickedRow]];
+            }
+        }
+        else if ([table.identifier isEqualToString:kBooksTableViewIdentifier])
+        {
+            if (table.clickedRow != -1 && table.clickedColumn != -1)
+            {
+                [self newWindowController:self.modelController.listOfBooks[table.clickedRow]];
+            }
+        }
     }
-    if ([self arrayContent:visitor])
+    
+}
+
+- (void)newWindowController:(id)object
+{
+    if ([object isKindOfClass:[STAVisitor class]])
     {
-        [self.windowControllersArray addObject:windowController];
+        STAVisitor *visitor = (STAVisitor *)object;
+        STAWindowController *windowController = [[STAWindowController alloc] initWithWindowNibName:@"STAWindowController" visitorForTable:visitor modelToChange:self.modelController];
+        [self addToWindowController:windowController];
+        [windowController showWindow:self];
+        [windowController release];
     }
-    [windowController showWindow:self];
-    [windowController release];
+    else if ([object isKindOfClass:[STABook class]])
+    {
+        STABook *book = (STABook *)object;
+        STABookEditWindow *windowController = [[STABookEditWindow alloc] initWithWindowNibName:@"STABookEditWindow" bookToEdit:book model:self.modelController];
+        [self addToWindowController:windowController];
+        [windowController showWindow:self];
+        [windowController release];
+    }
+}
+
+- (void)addToWindowController:(NSWindowController *)windowController
+{
+    if ([windowController isKindOfClass:[STAWindowController class]])
+    {
+        if (!self.windowControllersArray)
+        {
+            self.windowControllersArray = [[NSMutableArray alloc] init];
+        }
+        STAWindowController *visitorWindowController = (STAWindowController *)windowController;
+        if (![self.windowControllersArray containsObject:visitorWindowController])
+        {
+            [self.windowControllersArray addObject:visitorWindowController];
+        }
+    }
+    else if ([windowController isKindOfClass:[STABookEditWindow class]])
+    {
+        if (!self.windowControllersArray)
+        {
+            self.windowControllersArray = [[NSMutableArray alloc] init];
+        }
+        STABookEditWindow *bookWindowController = (STABookEditWindow *)windowController;
+        if (![self.windowControllersArray containsObject:bookWindowController])
+        {
+            [self.windowControllersArray addObject:bookWindowController];
+        }
+    }
 }
 
 - (void)windowClosed:(NSNotification *)note
 {
     NSWindow *window = [note object];
+    NSLog(@"%@", window.windowController);
     for (NSWindowController *winController in self.windowControllersArray)
     {
         if (winController.window == window)
@@ -390,22 +439,9 @@ NSString *const kOwnerTableColumnIdentifier = @"bookOwnerTableColumn";
     }
 }
 
-- (BOOL)arrayContent:(STAVisitor *)visitor
-{
-    BOOL result = YES;
-    NSArray *array = self.windowControllersArray;
-    for (int i = 0; i < array.count; i++)
-    {
-        if ([[[array objectAtIndex:i] visitor] isEqualTo:visitor])
-        {
-            result = NO;
-            break;
-        }
-    }
-    
-    array = nil;
-    return result;
-}
+/***********************************************
+    Default methods
+***********************************************/
 
 - (STAModelController *)modelController
 {
@@ -465,6 +501,7 @@ NSString *const kOwnerTableColumnIdentifier = @"bookOwnerTableColumn";
     [[NSNotificationCenter defaultCenter] removeObserver:self name:kNotificationModelVisitorDidRemoved object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:kNotificationModelBookDidAdded object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:kNotificationModelBookDidRemoved object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:NSWindowWillCloseNotification object:nil];
     [super dealloc];
 }
 

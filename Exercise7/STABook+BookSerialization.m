@@ -15,6 +15,7 @@ NSString *const kSTABookYear = @"kSTABookYear";
 NSString *const kSTABookCoverType = @"kSTABookCoverType";
 NSString *const kSTABookOwner = @"kSTABookOwner";
 NSString *const kSTABookID = @"kSTABookID";
+NSString *const kSTABookText = @"kSTABookText";
 
 @implementation STABook (BookSerialization)
 
@@ -26,10 +27,12 @@ NSString *const kSTABookID = @"kSTABookID";
     if (aDictionary[kSTABookOwner])
     {
         self.owner = [[[STAVisitor alloc] initWithDictionaryRepresentation:aDictionary[kSTABookOwner]] autorelease];
-        //        [STAVisitor readerWithName:[aDictionary[kSTABookOwner] objectForKey:@"name"]
-        //                                    readerSurname: [aDictionary[kSTABookOwner] objectForKey:@"surname"]
-        //                                    birthYear:[[aDictionary[kSTABookOwner] objectForKey:@"birthYear"] unsignedIntegerValue]];
     }
+    if (aDictionary[kSTABookText])
+    {
+        self.text = [aDictionary[kSTABookText] copy];
+    }
+    
     return self;
 }
 
@@ -44,13 +47,13 @@ NSString *const kSTABookID = @"kSTABookID";
     
     dict[kSTABookCoverType] = [NSNumber numberWithInteger:self.coverType];
     
-    if (self.owner) {
-        dict[kSTABookOwner] = /*[NSDictionary dictionaryWithObjectsAndKeys:
-                               self.owner.name, @"name",
-                               self.owner.surname, @"surname",
-                               [NSNumber numberWithUnsignedInteger:self.bookYear], @"birthYear",
-                               self.owner.fullName, @"full name", nil];*/
-        [self.owner dictionaryRepresentation];
+    if (self.owner)
+    {
+        dict[kSTABookOwner] = [self.owner dictionaryRepresentation];
+    }
+    if (self.text)
+    {
+        dict[kSTABookText] = self.text;
     }
     
     return dict;
