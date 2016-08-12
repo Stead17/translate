@@ -25,6 +25,7 @@
 
 @property (atomic, readwrite, assign) IBOutlet NSPopUpButton *languagesButton;
 @property (atomic, readwrite, assign) IBOutlet NSPopUpButton *languagesToTranslate;
+@property (atomic, readwrite, assign) IBOutlet NSPopUpButton *coverTypePopUpButton;
 
 @property (atomic, readwrite, assign) STAServerSessionManager *server;
 @property (atomic, readwrite, copy) NSDictionary *languagesDictionary;
@@ -36,10 +37,12 @@
 - (void)windowDidLoad
 {
     [super windowDidLoad];
-    [self.arrayOfTypeCoverItems removeAllObjects];
-    [self.arrayOfTypeCoverItems addObject:[[NSMenuItem alloc] initWithTitle:@"Undefined" action:nil keyEquivalent:@""]];
-    [self.arrayOfTypeCoverItems addObject:[[NSMenuItem alloc] initWithTitle:@"Papercover" action:nil keyEquivalent:@""]];
-    [self.arrayOfTypeCoverItems addObject:[[NSMenuItem alloc] initWithTitle:@"Hardcover" action:nil keyEquivalent:@""]];
+    
+    [self.coverTypePopUpButton removeAllItems];
+    [self.coverTypePopUpButton addItemWithTitle:@"Undefined"];
+    [self.coverTypePopUpButton addItemWithTitle:@"Papercover"];
+    [self.coverTypePopUpButton addItemWithTitle:@"Hardcover"];
+    [self.coverTypePopUpButton selectItemAtIndex:self.bookToEdit.coverType];
     
     [self.bookYearTextField setStringValue:[NSString stringWithFormat:@"%ld", self.bookToEdit.bookYear]];
     
@@ -93,6 +96,11 @@
     return YES;
 }
 
+- (IBAction)changeCoverTypeButton:(NSPopUpButton *)button
+{
+    self.bookToEdit.coverType = self.coverTypePopUpButton.indexOfSelectedItem;
+}
+
 - (IBAction)detectLanguage:(NSButton *)button
 {
     [self.server languageDetect:^(NSDictionary *text)
@@ -126,11 +134,7 @@
         
         [self.translatedTextView setString:@""];
         
-        __block NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:resultText];
-        [self.textView.attributedString enumerateAttributesInRange:NSMakeRange(0, self.textView.attributedString.length) options:NSAttributedStringEnumerationLongestEffectiveRangeNotRequired usingBlock:^(NSDictionary<NSString *,id> * _Nonnull attrs, NSRange range, BOOL * _Nonnull stop)
-        {
-            [attributedString addAttributes:attrs range:range];
-        }];
+         NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:resultText];
         
         [self.translatedTextView.textStorage setAttributedString:attributedString];
         

@@ -19,7 +19,6 @@
 		506989A41D5B1408005C1214 /* STABookEditWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 506989A21D5B1408005C1214 /* STABookEditWindow.m */; };
 		506989A51D5B1408005C1214 /* STABookEditWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 506989A31D5B1408005C1214 /* STABookEditWindow.xib */; };
 		506989A91D5B7257005C1214 /* STAServerSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 506989A81D5B7257005C1214 /* STAServerSessionManager.m */; };
-		506989AC1D5CA9E8005C1214 /* STAIntegerToString.m in Sources */ = {isa = PBXBuildFile; fileRef = 506989AB1D5CA9E8005C1214 /* STAIntegerToString.m */; };
 		509498F51D42069B00A0E47D /* STAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 509498F41D42069B00A0E47D /* STAAppDelegate.m */; };
 		509498F81D42069B00A0E47D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 509498F71D42069B00A0E47D /* main.m */; };
 		509498FA1D42069B00A0E47D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 509498F91D42069B00A0E47D /* Assets.xcassets */; };
@@ -51,8 +50,6 @@
 		506989A31D5B1408005C1214 /* STABookEditWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STABookEditWindow.xib; sourceTree = "<group>"; };
 		506989A71D5B7257005C1214 /* STAServerSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STAServerSessionManager.h; sourceTree = "<group>"; };
 		506989A81D5B7257005C1214 /* STAServerSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STAServerSessionManager.m; sourceTree = "<group>"; };
-		506989AA1D5CA9E8005C1214 /* STAIntegerToString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STAIntegerToString.h; sourceTree = "<group>"; };
-		506989AB1D5CA9E8005C1214 /* STAIntegerToString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STAIntegerToString.m; sourceTree = "<group>"; };
 		509498F01D42069B00A0E47D /* Exercise7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exercise7.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		509498F31D42069B00A0E47D /* STAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = STAAppDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		509498F41D42069B00A0E47D /* STAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = STAAppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
@@ -131,8 +128,6 @@
 				502447411D47CF5B001F8551 /* STAWindowController.xib */,
 				506989A31D5B1408005C1214 /* STABookEditWindow.xib */,
 				509498FB1D42069B00A0E47D /* MainMenu.xib */,
-				506989AA1D5CA9E8005C1214 /* STAIntegerToString.h */,
-				506989AB1D5CA9E8005C1214 /* STAIntegerToString.m */,
 				509498F71D42069B00A0E47D /* main.m */,
 				509498F91D42069B00A0E47D /* Assets.xcassets */,
 				509498FE1D42069B00A0E47D /* Info.plist */,
@@ -254,7 +249,6 @@
 				501F463A1D46631F00364CE5 /* STALibrary+LibrarySerialization.m in Sources */,
 				501F463D1D46655700364CE5 /* STAModelController.m in Sources */,
 				509498F51D42069B00A0E47D /* STAAppDelegate.m in Sources */,
-				506989AC1D5CA9E8005C1214 /* STAIntegerToString.m in Sources */,
 				501F462B1D46225700364CE5 /* STAVisitor.m in Sources */,
 				501F462E1D46225E00364CE5 /* STABook.m in Sources */,
 				506989A01D5B13DE005C1214 /* STACustomTableCellView.m in Sources */,

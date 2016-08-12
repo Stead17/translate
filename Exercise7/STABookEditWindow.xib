@@ -8,6 +8,7 @@
         <customObject id="-2" userLabel="File's Owner" customClass="STABookEditWindow">
             <connections>
                 <outlet property="bookYearTextField" destination="cBA-d5-P6z" id="fcW-Nl-ubl"/>
+                <outlet property="coverTypePopUpButton" destination="gUK-ol-LGX" id="fvz-BJ-KXD"/>
                 <outlet property="languagesButton" destination="XDB-ow-EJA" id="EPX-Lz-oU3"/>
                 <outlet property="languagesToTranslate" destination="c9O-Eu-s8p" id="x1y-G1-IIP"/>
                 <outlet property="textView" destination="DD9-t2-uaa" id="BT0-On-zkp"/>
@@ -84,20 +85,6 @@
                             <outlet property="delegate" destination="-2" id="BJF-Ql-4Ha"/>
                         </connections>
                     </textField>
-                    <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Hd-d7-NUi">
-                        <rect key="frame" x="120" y="390" width="131" height="26"/>
-                        <popUpButtonCell key="cell" type="push" title="Undefined" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="4xX-zD-4jP" id="fZv-0j-zLa">
-                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="menu"/>
-                            <menu key="menu" id="Jy8-ze-Xec">
-                                <items>
-                                    <menuItem title="Undefined" state="on" id="4xX-zD-4jP"/>
-                                    <menuItem title="Papercover" id="EDZ-ha-NOn"/>
-                                    <menuItem title="Hardcover" id="UDG-xV-wqw"/>
-                                </items>
-                            </menu>
-                        </popUpButtonCell>
-                    </popUpButton>
                     <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gUK-ol-LGX">
                         <rect key="frame" x="120" y="442" width="131" height="26"/>
                         <popUpButtonCell key="cell" type="push" alternateTitle="Owner" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="g40-Eh-qKn">
@@ -105,6 +92,9 @@
                             <font key="font" metaFont="menu"/>
                             <menu key="menu" id="v6Q-gA-Clo"/>
                         </popUpButtonCell>
+                        <connections>
+                            <action selector="changeCoverTypeButton:" target="-2" id="XMS-6P-bXO"/>
+                        </connections>
                     </popUpButton>
                     <tabView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pJe-6J-sHo">
                         <rect key="frame" x="249" y="106" width="746" height="542"/>
@@ -239,6 +229,17 @@
                             </tabViewItem>
                         </tabViewItems>
                     </tabView>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Soy-IY-8fg">
+                        <rect key="frame" x="120" y="397" width="130" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Label" id="yqf-vx-P1i">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                        <connections>
+                            <binding destination="-2" name="value" keyPath="self.bookToEdit.owner.fullName" id="THt-GH-5zt"/>
+                        </connections>
+                    </textField>
                 </subviews>
             </view>
             <connections>
